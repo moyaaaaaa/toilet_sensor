@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_16_104338) do
+ActiveRecord::Schema.define(version: 2019_02_16_125602) do
 
   create_table "sensors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "serial_id", null: false
+    t.string "serial_id", limit: 50, null: false
     t.float "voltage"
     t.boolean "opened", default: true, null: false
     t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
