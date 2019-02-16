@@ -1,2 +1,2 @@
-json.extract! sensor, :id, :RAILS_ENV=development, :created_at, :updated_at
-json.url sensor_url(sensor, format: :json)
+json.extract! sensor, :id, :voltage, :opened, :created_at, :updated_at
+
