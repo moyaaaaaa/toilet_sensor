@@ -1,5 +1,6 @@
 class SensorsController < ApplicationController
   before_action :set_sensor, only: :update
+  protect_from_forgery except: :update
 
   # GET /sensors
   # GET /sensors.json
