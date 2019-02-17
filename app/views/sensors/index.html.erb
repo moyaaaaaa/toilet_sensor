@@ -1,19 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Sensors</h1>
+<h1>うんこさせろ</h1>
 
 <table>
   <thead>
     <tr>
-      <th>opened</th>
-      <th>voltage</th>
+      <th>ドア</th>
+      <th>電圧</th>
     </tr>
   </thead>
 
   <tbody>
     <% @sensors.each do |sensor| %>
       <tr>
-        <td><%= sensor.opened %></td>
+        <td>
+          <% if sensor.opened %>
+              <%= image_tag 'open.bmp' %>
+          <% else %>
+              <%= image_tag 'close.bmp' %>
+          <% end %>
+        </td>
         <td><%= sensor.voltage %></td>
       </tr>
     <% end %>
